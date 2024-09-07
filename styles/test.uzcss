@@ -1,6 +1,4 @@
-.mySelector {
-  rang: qizl;
-  matn-holati: oq;
+h1 {
+    ra: qizil;
+    orqa-fon-rangi: yashil;
 }
-
-/* block comment */
