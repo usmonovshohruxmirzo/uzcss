@@ -1,4 +1,4 @@
-![Uzbekistan Flag Sticker (2)](https://github.com/user-attachments/assets/438fbebb-dfcc-44df-b08f-02f648c61d48)
+![uzcss logo](https://github.com/user-attachments/assets/ba67fec3-1163-47d7-8c33-9cf36616b07a)
 
 # UZCSS Lang
 
@@ -31,8 +31,8 @@ Follow these steps to set up and run the UZCSS compiler in your project.
 1.  **Clone the repository:**
 
     ```bash
-    git clone https://github.com/usmonovshohruxmirzo/uzcss-lang.git
-    cd uzcss-lang
+    git clone https://github.com/usmonovshohruxmirzo/uzcss.git
+    cd uzcss
     ```
 
 2.  **Install dependencies:**
@@ -71,7 +71,7 @@ Place your Uzbek CSS files in the `styles` directory (or any subdirectory within
 
 **Example: `styles/main.uzcss`**
 
-```uzcss
+```css
 body {
   rang: qora;
   orqa-fon-rangi: qizil;
@@ -128,7 +128,7 @@ header {
 ## 📂 Project Structure
 
 ```
-uzcss-lang/
+uzcss/
 ├── src/
 │   └── index.mjs             # The main compiler script
 ├── config/
