@@ -1,5 +1,4 @@
-![uzcss logo)](https://github.com/user-attachments/assets/96f0af25-9741-46ab-964f-679ecb72b71e)
-
+![uzcss logo](https://github.com/user-attachments/assets/ba67fec3-1163-47d7-8c33-9cf36616b07a)
 
 # UZCSS Lang
 
