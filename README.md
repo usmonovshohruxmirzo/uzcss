@@ -1,4 +1,4 @@
-# UZCSS Compiler
+# UZCSS Lang
 
 A custom CSS preprocessor that allows developers to write CSS using Uzbek property and value names, which are then compiled into standard English CSS. This project aims to make web styling more accessible and intuitive for Uzbek-speaking developers.
 
