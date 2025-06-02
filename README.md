@@ -1,4 +1,4 @@
-![Uzbekistan Flag Sticker (2)](https://github.com/user-attachments/assets/438fbebb-dfcc-44df-b08f-02f648c61d48)
+![uzcss logo](https://github.com/user-attachments/assets/ba67fec3-1163-47d7-8c33-9cf36616b07a)
 
 # UZCSS Lang
 
