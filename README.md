@@ -30,7 +30,7 @@ Follow these steps to set up and run the UZCSS compiler in your project.
 
     ```bash
     git clone [https://github.com/usmonovshohruxmirzo/uzcss-lang.git](https://github.com/your-username/uzcss-compiler.git)
-    cd uzcss-compiler
+    cd uzcss-lang
     ```
 
 2.  **Install dependencies:**
@@ -194,4 +194,5 @@ This project is licensed under the ISC License - see the [LICENSE](https://www.g
 ## ❓ Support and Contact
 
 If you have any questions or need assistance, please open an issue in the GitHub repository.
+
 # uzcss-lang
