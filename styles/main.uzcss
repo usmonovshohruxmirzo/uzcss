@@ -1,3 +1,9 @@
 h1 {
     /*rang: qizil;*/
 }
+
+div {
+    ko`rsatish: moslashuvchan;
+    asosiy-o`q: markaz;
+    kesish-o`q: markaz;
+}

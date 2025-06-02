@@ -1,0 +1,300 @@
+/* Body elementi */
+body {
+  rang: qora;
+  orqa-fon-rangi: kulrang;
+  shrft-o`lchami: 16px;
+  matn-holat: markaz;
+  kenglik: 100%;
+  balandlik: 100vh;
+  ichki-bo`shliq: 20px;
+  chegaralar: 0;
+  satr-balandligi: 1.5;
+  yozuv-qalinligi: normal;
+  harf-oraligi: 1px;
+}
+
+/* Sarlavha - h1 */
+h1 {
+  rang: ko`k;
+  orqa-fon-rangi: yashil;
+  shrft-o`lchami: katta;
+  matn-holat: markaz;
+  yozuv-qalinligi: qalin;
+  ichki-bo`shliq: 30px;
+  chegaralar: 15px;
+  chegara: 2px;
+  chegara-rangi: qora;
+  chegara-turi: solid;
+  chegara-radiusi: 10px;
+  matn-soyasi: 2px 2px kulrang;
+  matn-o`zgarish: uppercase;
+}
+
+/* Kichik sarlavha - h2 */
+h2 {
+  rang: binafsha;
+  orqa-fon-rangi: pushti;
+  shrft-o`lchami: o`rta;
+  matn-holat: chap;
+  yozuv-qalinligi: qalin;
+  ichki-bo`shliq: 20px;
+  chegaralar: 10px;
+  chegara-radiusi: 8px;
+  soya: 0 2px 4px kulrang;
+}
+
+/* Paragraf */
+p {
+  rang: kulrang;
+  shrft-o`lchami: kichik;
+  satr-balandligi: 1.6;
+  matn-holat: chap;
+  harf-oraligi: 1px;
+  so`z-oraligi: 2px;
+  ichki-bo`shliq: 15px;
+  chegaralar: 8px;
+  to`lib-ketish: yashirin;
+  orqa-fon-rangi: sariq;
+}
+
+/* Div konteyner */
+div {
+  kenglik: 500px;
+  balandlik: 400px;
+  orqa-fon-rangi: oq;
+  ichki-bo`shliq: 50px;
+  chegaralar: 20px;
+  pozitsiya: nisbiy;
+  ko`rsatish: moslashuvchan;
+  flex-yo`nalish: ustun;
+  asosiy-o`q: markaz;
+  kesish-o`q: markaz;
+  chegara: 3px;
+  chegara-rangi: kulrang;
+  chegara-turi: solid;
+  chegara-radiusi: 15px;
+  soya: 0 4px 8px kulrang;
+  shaffoflik: 0.95;
+}
+
+/* Tugma */
+button {
+  kenglik: 150px;
+  balandlik: 40px;
+  orqa-fon-rangi: yashil;
+  rang: oq;
+  shrft-o`lchami: o`rta;
+  yozuv-qalinligi: qalin;
+  ichki-bo`shliq: 10px;
+  chegaralar: 5px;
+  chegara-radiusi: 5px;
+  cursor-ko`rinishi: pointer;
+  matn-holat: markaz;
+  ko`rsatish: satr-ichida;
+  o`tish: all 0.3s;
+}
+
+/* Span elementi */
+span {
+  rang: qizil;
+  orqa-fon-rangi: sariq;
+  yozuv-qalinligi: qalin;
+  ichki-bo`shliq: 5px;
+  chegara-radiusi: 3px;
+  matn-bezak: underline;
+}
+
+/* Input maydon */
+input {
+  kenglik: 200px;
+  balandlik: 35px;
+  ichki-bo`shliq: 10px;
+  chegaralar: 5px;
+  chegara: 1px;
+  chegara-rangi: kulrang;
+  chegara-turi: solid;
+  chegara-radiusi: 4px;
+  shrft-o`lchami: normal;
+  orqa-fon-rangi: oq;
+  rang: qora;
+}
+
+/* Table jadval */
+table {
+  kenglik: 100%;
+  chegara: 1px;
+  chegara-rangi: qora;
+  chegara-turi: solid;
+  orqa-fon-rangi: oq;
+  matn-holat: chap;
+}
+
+/* Table qator */
+tr {
+  balandlik: 40px;
+}
+
+/* Table katak */
+td {
+  ichki-bo`shliq: 12px;
+  chegara: 1px;
+  chegara-rangi: kulrang;
+  chegara-turi: solid;
+  matn-holat: chap;
+}
+
+/* Table sarlavha */
+th {
+  ichki-bo`shliq: 15px;
+  orqa-fon-rangi: kulrang;
+  rang: oq;
+  yozuv-qalinligi: qalin;
+  matn-holat: markaz;
+  chegara: 1px;
+  chegara-rangi: qora;
+  chegara-turi: solid;
+}
+
+/* Havola */
+a {
+  rang: ko`k;
+  matn-bezak: underline;
+  o`tish: all 0.2s;
+}
+
+/* Ro`yxat */
+ul {
+  ichki-bo`shliq: 20px;
+  chegaralar: 10px;
+  orqa-fon-rangi: yashil;
+  chegara-radiusi: 5px;
+}
+
+li {
+  ichki-bo`shliq: 8px;
+  chegaralar: 3px;
+  chegara-qalinligi: 1px;
+  chegara-turi: dotted;
+  chegara-rangi: kulrang;
+}
+
+/* Rasm */
+img {
+  kenglik: 100%;
+  balandlik: auto;
+  chegara-radiusi: 10px;
+  soya: 0 4px 8px kulrang;
+  o`tish: all 0.3s;
+}
+
+/* Matn maydoni */
+textarea {
+  kenglik: 300px;
+  balandlik: 100px;
+  ichki-bo`shliq: 10px;
+  chegaralar: 10px;
+  chegara: 1px;
+  chegara-rangi: kulrang;
+  chegara-turi: solid;
+  chegara-radiusi: 5px;
+  satr-balandligi: 1.4;
+  orqa-fon-rangi: oq;
+  rang: qora;
+  to`lib-ketish: auto;
+}
+
+/* Maqola */
+article {
+  kenglik: 600px;
+  ichki-bo`shliq: 30px;
+  chegaralar: 20px;
+  orqa-fon-rangi: oq;
+  chegara: 1px;
+  chegara-rangi: kulrang;
+  chegara-turi: solid;
+  chegara-radiusi: 8px;
+  soya: 0 2px 10px kulrang;
+}
+
+/* Bo`lim */
+section {
+  chegaralar: 25px;
+  ichki-bo`shliq: 20px;
+  orqa-fon-rangi: ko`k;
+  chegara-chap: 4px;
+  chegara-rangi: ko`k;
+  chegara-turi: solid;
+}
+
+/* Nav */
+nav {
+  orqa-fon-rangi: kulrang;
+  ichki-bo`shliq: 15px;
+  ko`rsatish: moslashuvchan;
+  asosiy-o`q: bo`shliq-orasida;
+  kesish-o`q: markaz;
+}
+
+/* Footer */
+footer {
+  orqa-fon-rangi: qora;
+  rang: oq;
+  matn-holat: markaz;
+  ichki-bo`shliq: 20px;
+  chegaralar: 30px;
+}
+
+/* Grid konteyner */
+.grid-konteyner {
+  ko`rsatish: tor;
+  grid-shablon: repeat(3, 1fr);
+  grid-bo`shliq: 20px;
+  kenglik: 100%;
+  ichki-bo`shliq: 30px;
+  orqa-fon-rangi: kulrang;
+}
+
+/* Flex konteyner */
+.flex-konteyner {
+  ko`rsatish: moslashuvchan;
+  flex-yo`nalish: satr;
+  flex-o`ralash: wrap;
+  asosiy-o`q: bo`shliq-atrofida;
+  kesish-o`q: cho`zilgan;
+  kenglik: 100%;
+  balandlik: 300px;
+  orqa-fon-rangi: sariq;
+  ichki-bo`shliq: 25px;
+}
+
+/* Pozitsiya misollari */
+.fixed-element {
+  pozitsiya: qo`zg`almas;
+  yuqori: 0;
+  o`ng: 0;
+  kenglik: 200px;
+  balandlik: 100px;
+  orqa-fon-rangi: qizil;
+  rang: oq;
+  z-indeks: 1000;
+  ichki-bo`shliq: 20px;
+  matn-holat: markaz;
+}
+
+.absolute-element {
+  pozitsiya: mutlaq;
+  pastki: 10px;
+  chapga: 50px;
+  kenglik: 100px;
+  balandlik: 50px;
+  orqa-fon-rangi: binafsha;
+  rang: oq;
+}
+
+.sticky-element {
+  pozitsiya: yopishqoq;
+  yuqoriga: 20px;
+  orqa-fon-rangi: jigarrang;
+  rang: oq;
+  ichki-bo`shliq: 10px;
+}
