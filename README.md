@@ -1,6 +1,6 @@
 ![uzcss logo](https://github.com/user-attachments/assets/ba67fec3-1163-47d7-8c33-9cf36616b07a)
 
-# uzCSS Lang
+# uzCSS Lang - Write CSS in Native Uzbek, Compile to Standard CSS
 
 A custom CSS preprocessor that allows developers to write CSS using `Uzbek` property and value names, which are then compiled into standard English CSS. This project aims to make web styling more accessible and intuitive for Uzbek-speaking developers.
 
