@@ -1,3 +1,5 @@
+![Uzbekistan Flag Sticker (1)](https://github.com/user-attachments/assets/312d4e56-0740-4131-9eac-51cb1000e830)
+
 # UZCSS Lang
 
 A custom CSS preprocessor that allows developers to write CSS using `Uzbek` property and value names, which are then compiled into standard English CSS. This project aims to make web styling more accessible and intuitive for Uzbek-speaking developers.
