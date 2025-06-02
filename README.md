@@ -31,8 +31,8 @@ Follow these steps to set up and run the UZCSS compiler in your project.
 1.  **Clone the repository:**
 
     ```bash
-    git clone https://github.com/usmonovshohruxmirzo/uzcss-lang.git
-    cd uzcss-lang
+    git clone https://github.com/usmonovshohruxmirzo/uzcss.git
+    cd uzcss
     ```
 
 2.  **Install dependencies:**
@@ -128,7 +128,7 @@ header {
 ## 📂 Project Structure
 
 ```
-uzcss-lang/
+uzcss/
 ├── src/
 │   └── index.mjs             # The main compiler script
 ├── config/
