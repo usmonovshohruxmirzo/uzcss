@@ -71,7 +71,7 @@ Place your Uzbek CSS files in the `styles` directory (or any subdirectory within
 
 **Example: `styles/main.uzcss`**
 
-```uzcss
+```css
 body {
   rang: qora;
   orqa-fon-rangi: qizil;
