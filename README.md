@@ -194,5 +194,3 @@ This project is licensed under the ISC License - see the [LICENSE](./LICENSE) fi
 ## ❓ Support and Contact
 
 If you have any questions or need assistance, please open an issue in the GitHub repository.
-
-# uzcss-lang
