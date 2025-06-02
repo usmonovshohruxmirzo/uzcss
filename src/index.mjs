@@ -53,7 +53,9 @@ async function main() {
   const outputBaseDir = args[args.length - 1];
 
   console.log(chalk.blue(`🔍 Qidirilmoqda: ${inputGlobPatterns.join(", ")}`));
+  console.log();
   console.log(chalk.blue(`📂 Chiqish papkasi: ${outputBaseDir}`));
+  console.log();
 
   try {
     const files = await fg(inputGlobPatterns, {
