@@ -19,7 +19,10 @@ function translateCss(cssContent) {
   }
 
   for (const [uz, en] of Object.entries(values)) {
-    const regex = new RegExp(`(:\\s*)${escapeRegex(uz)}\\b`, "g");
+    const regex = new RegExp(
+      `(:\\s*)\\b${escapeRegex(uz)}\\b(?=\\s*[;,}\\s]|$)`,
+      "g"
+    );
     translatedCss = translatedCss.replace(regex, `$1${en}`);
   }
 
@@ -27,10 +30,9 @@ function translateCss(cssContent) {
 }
 
 async function main() {
-  const inputGlobPatterns = process.argv.slice(2, -1);
-  const outputBaseDir = process.argv[process.argv.length - 1];
+  const args = process.argv.slice(2);
 
-  if (inputGlobPatterns.length === 0 || !outputBaseDir) {
+  if (args.length < 2) {
     console.error(
       chalk.red(
         `❌ Foydalanish: node src/index.mjs <kiritma_fayl_naqshlari...> <chiqish_papka>`
@@ -39,8 +41,16 @@ async function main() {
     console.error(
       chalk.yellow(`Misol: node src/index.mjs "styles/**/*.uzcss" "dist"`)
     );
+    console.error(
+      chalk.yellow(
+        `Yoki: node src/index.mjs "styles/main.uzcss" "styles/components/*.uzcss" "dist"`
+      )
+    );
     process.exit(1);
   }
+
+  const inputGlobPatterns = args.slice(0, -1);
+  const outputBaseDir = args[args.length - 1];
 
   console.log(chalk.blue(`🔍 Qidirilmoqda: ${inputGlobPatterns.join(", ")}`));
   console.log(chalk.blue(`📂 Chiqish papkasi: ${outputBaseDir}`));
@@ -50,52 +60,85 @@ async function main() {
       dot: true,
       onlyFiles: true,
       unique: true,
+      absolute: false,
     });
 
     if (files.length === 0) {
       console.warn(chalk.yellow("⚠️ Mos keladigan .uzcss fayllar topilmadi."));
+      console.log(chalk.gray("Qidirilgan naqshlar:"));
+      inputGlobPatterns.forEach((pattern) =>
+        console.log(chalk.gray(`  - ${pattern}`))
+      );
       return;
     }
 
     console.log(chalk.cyan(`📄 Topilgan ${files.length} ta .uzcss fayl:`));
-    files.forEach((file) => console.log(chalk.gray(`- ${file}`)));
+    files.forEach((file) => console.log(chalk.gray(`  - ${file}`)));
+    console.log();
+
+    let successCount = 0;
+    let errorCount = 0;
 
     for (const inputFilePath of files) {
       try {
         const uzcssContent = await fs.readFile(inputFilePath, "utf-8");
 
+        if (uzcssContent.trim() === "") {
+          console.warn(chalk.yellow(`⚠️ Bo'sh fayl: ${inputFilePath}`));
+          continue;
+        }
+
         const translatedCssContent = translateCss(uzcssContent);
 
-        const relativeInputPath = path.relative(process.cwd(), inputFilePath);
         const outputFileName = path.basename(inputFilePath, ".uzcss") + ".css";
-        const outputDir = path.join(
-          outputBaseDir,
-          path.dirname(relativeInputPath)
-        );
+        const inputDir = path.dirname(inputFilePath);
+        const outputDir = path.join(outputBaseDir, inputDir);
 
         await fsExtra.ensureDir(outputDir);
 
         const outputFilePath = path.join(outputDir, outputFileName);
 
-        await fs.writeFile(outputFilePath, translatedCssContent);
+        await fs.writeFile(outputFilePath, translatedCssContent, "utf-8");
 
-        console.log(chalk.green(`✅ Tarjima yakunlandi: ${outputFilePath}`));
+        console.log(chalk.green(`✅ ${inputFilePath} → ${outputFilePath}`));
+        successCount++;
       } catch (fileError) {
         console.error(
           chalk.red(
             `❌ "${inputFilePath}" faylini qayta ishlashda xato: ${fileError.message}`
           )
         );
+        errorCount++;
       }
     }
 
-    console.log(
-      chalk.green("\n🎉 Barcha fayllar muvaffaqiyatli tarjima qilindi!")
-    );
+    console.log();
+    if (successCount > 0) {
+      console.log(
+        chalk.green(
+          `🎉 ${successCount} ta fayl muvaffaqiyatli tarjima qilindi!`
+        )
+      );
+    }
+    if (errorCount > 0) {
+      console.log(chalk.red(`❌ ${errorCount} ta faylda xato yuz berdi.`));
+      process.exit(1);
+    }
   } catch (error) {
     console.error(chalk.red(`\n❌ Umumiy xato: ${error.message}`));
+    console.error(chalk.gray(error.stack));
     process.exit(1);
   }
 }
+
+process.on("SIGINT", () => {
+  console.log(chalk.yellow("\n\n⏹️ Jarayon to'xtatildi."));
+  process.exit(0);
+});
+
+process.on("uncaughtException", (error) => {
+  console.error(chalk.red("\n❌ Kutilmagan xato:"), error.message);
+  process.exit(1);
+});
 
 main();
