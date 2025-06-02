@@ -85,6 +85,7 @@ const values = {
   boshi: "flex-start",
   oxiri: "flex-end",
   "cho`zilgan": "stretch",
+  "tagiga-chizish": "underline",
 };
 
 export { properties, values };
