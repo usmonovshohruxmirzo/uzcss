@@ -29,7 +29,7 @@ Follow these steps to set up and run the UZCSS compiler in your project.
 1.  **Clone the repository:**
 
     ```bash
-    git clone [https://github.com/usmonovshohruxmirzo/uzcss-lang.git](https://github.com/your-username/uzcss-compiler.git)
+    git clone [https://github.com/usmonovshohruxmirzo/uzcss-lang.git](https://github.com/usmonovshohruxmirzo/uzcss-lang.git)
     cd uzcss-lang
     ```
 
@@ -126,7 +126,7 @@ header {
 ## 📂 Project Structure
 
 ```
-uzcss-compiler/
+uzcss-lang/
 ├── src/
 │   └── index.mjs             # The main compiler script
 ├── config/
@@ -187,7 +187,7 @@ Contributions are welcome\! If you have suggestions for new Uzbek terms, improve
 
 ## 📄 License
 
-This project is licensed under the ISC License - see the [LICENSE](https://www.google.com/search?q=LICENSE) file for details.
+This project is licensed under the ISC License - see the [LICENSE](./LICENSE) file for details.
 
 ---
 
