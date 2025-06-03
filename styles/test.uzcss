@@ -221,7 +221,6 @@ section {
   chegaralar: 25px;
   ichki-bo`shliq: 20px;
   orqa-fon-rangi: ko`k;
-  chegara-chap: 4px;
   chegara-rangi: ko`k;
   chegara-turi: solid;
 }
