@@ -1,5 +1,5 @@
 import chalk from "chalk";
-import { properties } from "../config/uzcss.config.mjs";
+import { properties } from "./config/uzcss.config.mjs";
 
 let hasError = false;
 

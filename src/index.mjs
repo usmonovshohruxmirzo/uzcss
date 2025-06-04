@@ -3,7 +3,7 @@ import path from "path";
 import chalk from "chalk";
 import fg from "fast-glob";
 import fsExtra from "fs-extra";
-import { properties, values } from "../config/uzcss.config.mjs";
+import { properties, values } from "./config/uzcss.config.mjs";
 
 function escapeRegex(string) {
   return string.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
