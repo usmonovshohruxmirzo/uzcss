@@ -4,9 +4,6 @@ import chalk from "chalk";
 import fg from "fast-glob";
 import fsExtra from "fs-extra";
 import { properties, values } from "../config/uzcss.config.mjs";
-import { uzcssLinter, getHasError } from "./linter.mjs";
-
-getHasError();
 
 function escapeRegex(string) {
   return string.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
@@ -19,12 +16,20 @@ function emptyLine() {
 function translateCss(cssContent) {
   let translatedCss = cssContent;
 
-  for (const [uz, en] of Object.entries(properties)) {
+  const sortedProperties = Object.entries(properties).sort(
+    (a, b) => b[0].length - a[0].length
+  );
+
+  for (const [uz, en] of sortedProperties) {
     const regex = new RegExp(`\\b${escapeRegex(uz)}\\b(?=\\s*:)`, "g");
     translatedCss = translatedCss.replace(regex, en);
   }
 
-  for (const [uz, en] of Object.entries(values)) {
+  const sortedValues = Object.entries(values).sort(
+    (a, b) => b[0].length - a[0].length
+  );
+
+  for (const [uz, en] of sortedValues) {
     const regex = new RegExp(
       `(:\\s*)\\b${escapeRegex(uz)}\\b(?=\\s*[;,}\\s]|$)`,
       "g"
@@ -90,19 +95,6 @@ async function main() {
     for (const inputFilePath of files) {
       try {
         const uzcssContent = await fs.readFile(inputFilePath, "utf-8");
-
-        uzcssLinter(uzcssContent, inputFilePath);
-
-        // TODO: fix linter
-        if (getHasError()) {
-          emptyLine();
-          console.error(
-            chalk.red(
-              `❌ Xatolik topildi faylda: ${inputFilePath}, jarayon to'xtatildi!`
-            )
-          );
-          process.exit(1);
-        }
 
         if (uzcssContent.trim() === "") {
           console.warn(chalk.yellow(`⚠️ Bo'sh fayl: ${inputFilePath}`));
