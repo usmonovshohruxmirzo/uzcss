@@ -2,7 +2,7 @@ const properties = {
   rang: "color",
   "orqa-fon-rangi": "background-color",
   "shrft-o`lchami": "font-size",
-  chegaralar: "margin",
+  "tashqi-bo`shliq": "margin",
   "ichki-bo`shliq": "padding",
   "ko`rsatish": "display",
   kengligi: "width",
@@ -47,8 +47,8 @@ const properties = {
   "to`lib-ketish-x": "overflow-x",
   "quti-o`lchami": "box-sizing",
   "shrft-oila": "font-family",
-  "chegara-past": "border-bottom",
-  "chegara-tepa": "border-top",
+  "tashqi-bo`shliq-past": "margin-bottom",
+  "tashqi-bo`shliq-tepa": "margin-top",
   "maksimal-balandlik": "max-height",
   "minimal-balandlik": "min-height",
   "minimal-kenglik": "min-width",
@@ -59,7 +59,8 @@ const properties = {
   "shrft-vazni": "font-weight",
   kontent: "content",
   animatsiya: "animation",
-  "chegaralar-bottom": "margin-bottom",
+  "chegara-past": "margin-bottom",
+  "chegara-tepa": "margin-top",
   "grid-shablon-ustunlar": "grid-template-columns",
   "tashqi-chegara": "outline",
   "orqa-fon-filtri": "backdrop-filter",
@@ -69,6 +70,7 @@ const properties = {
   "veb-to`plam-to`ldirish-rangi": "-webkit-text-fill-color",
   "orqa-fon-o`lchami": "background-size",
   "orqa-fon-pozitsiyasi": "background-position",
+  past: "bottom",
 };
 
 const values = {
