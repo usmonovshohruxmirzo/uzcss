@@ -8,7 +8,7 @@ const properties = {
   kengligi: "width",
   balandligi: "height",
   "chegara-radiusi": "border-radius",
-  "matn-holat": "text-align",
+  "matn-holati": "text-align",
   "yozuv-qalinligi": "font-weight",
   chegara: "border",
   "chegara-rangi": "border-color",
@@ -45,7 +45,7 @@ const properties = {
   "grid-shablon": "grid-template",
   "grid-bo`shliq": "gap",
   "to`lib-ketish-x": "overflow-x",
-  "quti-o'lchami": "box-sizing",
+  "quti-o`lchami": "box-sizing",
   "shrft-oila": "font-family",
   "chegara-past": "border-bottom",
   "chegara-tepa": "border-top",
@@ -62,6 +62,13 @@ const properties = {
   "chegaralar-bottom": "margin-bottom",
   "grid-shablon-ustunlar": "grid-template-columns",
   "tashqi-chegara": "outline",
+  "orqa-fon-filtri": "backdrop-filter",
+  "o`tish-harakati": "scroll-behavior",
+  "orqa-fon-klipi": "background-clip",
+  "veb-to`plam-orqa-fon-klipi": "-webkit-background-clip",
+  "veb-to`plam-to`ldirish-rangi": "-webkit-text-fill-color",
+  "orqa-fon-o`lchami": "background-size",
+  "orqa-fon-pozitsiyasi": "background-position",
 };
 
 const values = {
@@ -93,7 +100,7 @@ const values = {
   yashirin: "hidden",
   "ko`rinadigan": "visible",
   nisbiy: "relative",
-  mutlaq: "absolute",
+  mutlaqo: "absolute",
   "qo`zg`almas": "fixed",
   yopishqoq: "sticky",
   ustun: "column",
@@ -107,6 +114,33 @@ const values = {
   "yo`q": "none",
   "chegara-qutisi": "border-box",
   barcha: "all",
+  silliq: "smooth",
+  shaffof: "transparent",
+  matn: "text",
+  avtomatik: "auto",
+  "o`rash": "wrap",
+  shaffoflik: "opacity",
 };
 
-export { properties, values };
+const atRuleReplacements = {
+  "@asosiy-kadrlar": "@keyframes",
+  "@ekran": "@media",
+};
+
+const functionsReplacements = {
+  "Y-o`qi-bo`ylab-xarakat": "translateY",
+  "X-o`qi-bo`ylab-xarakat": "translateX",
+  "X-o`qi-bo`ylab-aylantirish": "rotateX",
+  "Y-o`qi-bo`ylab-aylantirish": "rotateY",
+  xiralashish: "blur",
+  "ko`rsatkich": "scale",
+  burilish: "rotate",
+  siljitish: "translate",
+  "o`lcham": "scale",
+  "og`ish": "skew",
+  matritsa: "matrix",
+  "chiziqli-rang-oqimi": "linear-gradient",
+  "doiraviy-rang-oqimi": "radial-gradient",
+};
+
+export { properties, values, atRuleReplacements, functionsReplacements };
