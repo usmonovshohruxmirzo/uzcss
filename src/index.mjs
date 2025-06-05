@@ -3,7 +3,12 @@ import path from "path";
 import chalk from "chalk";
 import fg from "fast-glob";
 import fsExtra from "fs-extra";
-import { properties, values } from "./config/uzcss.config.mjs";
+import {
+  atRuleReplacements,
+  functionsReplacements,
+  properties,
+  values,
+} from "./config/uzcss.config.mjs";
 
 function escapeRegex(string) {
   return string.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
@@ -15,6 +20,20 @@ function emptyLine() {
 
 function translateCss(cssContent) {
   let translatedCss = cssContent;
+
+  const sortedFunctions = Object.entries(functionsReplacements).sort(
+    (a, b) => b[0].length - a[0].length
+  );
+
+  for (const [uz, en] of sortedFunctions) {
+    const funcRegex = new RegExp(`\\b${escapeRegex(uz)}(?=\\()`, "g");
+    translatedCss = translatedCss.replace(funcRegex, en);
+  }
+
+  for (const [uz, en] of Object.entries(atRuleReplacements)) {
+    const regex = new RegExp(escapeRegex(uz), "g");
+    translatedCss = translatedCss.replace(regex, en);
+  }
 
   const sortedProperties = Object.entries(properties).sort(
     (a, b) => b[0].length - a[0].length
@@ -30,11 +49,8 @@ function translateCss(cssContent) {
   );
 
   for (const [uz, en] of sortedValues) {
-    const regex = new RegExp(
-      `(:\\s*)\\b${escapeRegex(uz)}\\b(?=\\s*[;,}\\s]|$)`,
-      "g"
-    );
-    translatedCss = translatedCss.replace(regex, `$1${en}`);
+    const regex = new RegExp(`\\b${escapeRegex(uz)}\\b`, "g");
+    translatedCss = translatedCss.replace(regex, en);
   }
 
   return translatedCss;
@@ -64,9 +80,9 @@ async function main() {
   const outputBaseDir = args[args.length - 1];
 
   console.log(chalk.blue(`🔍 Qidirilmoqda: ${inputGlobPatterns.join(", ")}`));
-  console.log();
+  emptyLine();
   console.log(chalk.blue(`📂 Chiqish papkasi: ${outputBaseDir}`));
-  console.log();
+  emptyLine();
 
   try {
     const files = await fg(inputGlobPatterns, {
@@ -87,7 +103,7 @@ async function main() {
 
     console.log(chalk.cyan(`📄 Topilgan ${files.length} ta .uzcss fayl:`));
     files.forEach((file) => console.log(chalk.gray(`  - ${file}`)));
-    console.log();
+    emptyLine();
 
     let successCount = 0;
     let errorCount = 0;
@@ -126,7 +142,7 @@ async function main() {
       }
     }
 
-    console.log();
+    emptyLine();
     if (successCount > 0) {
       console.log(
         chalk.green(
