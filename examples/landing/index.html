@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="uz">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UZCSS - O`zbekcha CSS Framework</title>
+    <link rel="stylesheet" href="../../dist/styles/landing/landing.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+  </head>
+  <body>
+    <nav class="nav">
+      <div class="nav-container">
+        <a href="#" class="logo">uzCSS</a>
+        <ul class="nav-links">
+          <li><a href="#featured" class="nav-link">Xususiyatlar</a></li>
+          <li><a href="#categories" class="nav-link">Qo'llanma</a></li>
+          <li><a href="#about" class="nav-link">Loyiha haqida</a></li>
+          <li><a href="#newsletter" class="nav-link">Yangiliklar</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <section class="hero">
+      <div class="hero-content">
+        <h1 class="animate">uzCSS - O'zbek tilida CSS</h1>
+        <p class="animate">
+          CSS xususiyatlari va qiymatlarini o'zbek tilida yozing, avtomatik
+          ravishda standart CSS ga kompilyatsiya qiling. O'zbek dasturchilari
+          uchun mo'ljallangan zamonaviy CSS preprocessor.
+        </p>
+        <div class="hero-buttons animate">
+          <a href="#featured" class="btn">
+            <span>Boshlash</span>
+          </a>
+          <a
+            href="https://github.com/usmonovshohruxmirzo/
+            target="_blank"
+            class="btn btn-outline"
+          >
+            <span>GitHub</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="featured" id="featured">
+      <h2 class="section-title animate">Asosiy Xususiyatlar</h2>
+      <div class="posts-grid">
+        <article class="post-card animate">
+          <div class="post-image">
+            <i class="fas fa-language"></i>
+          </div>
+          <div class="post-content">
+            <div class="post-meta">🔤 O'zbek sintaksisi</div>
+            <h3 class="post-title">O'zbek tilida CSS yozing</h3>
+            <p class="post-excerpt">
+              CSS xususiyatlari va qiymatlarini o'zbek tilida yozing. Masalan:
+              rang, kenglik, balandlik, orqa-fon-rangi kabi so'zlardan
+              foydalaning.
+            </p>
+          </div>
+        </article>
+
+        <article class="post-card animate">
+          <div class="post-image">
+            <i class="fas fa-bolt"></i>
+          </div>
+          <div class="post-content">
+            <div class="post-meta">⚡ Avtomatik tarjima</div>
+            <h3 class="post-title">Avtomatik kompilyatsiya</h3>
+            <p class="post-excerpt">
+              .fayllaringiz avtomatik ravishda standart CSS ga
+              kompilyatsiya qilinadi. Hech qanday qo'shimcha sozlash talab
+              etilmaydi.
+            </p>
+          </div>
+        </article>
+
+        <article class="post-card animate">
+          <div class="post-image">
+            <i class="fas fa-folder-open"></i>
+          </div>
+          <div class="post-content">
+            <div class="post-meta">
+              📁 Glob pattern qo'llab-quvvatlash
+            </div>
+            <h3 class="post-title">Ko'p fayllarni birdaniga ishlash</h3>
+            <p class="post-excerpt">
+              Glob pattern yordamida bir nechta .fayllarini turli
+              papkalarda joylashgan bo'lsa ham birdaniga kompilyatsiya qiling.
+            </p>
+          </div>
+        </article>
+
+        <article class="post-card animate">
+          <div class="post-image">
+            <i class="fas fa-project-diagram"></i>
+          </div>
+          <div class="post-content">
+            <div class="post-meta">🎯 Osongina integratsiya</div>
+            <h3 class="post-title">
+              Mavjud loyihalarga osongina qo'shing
+            </h3>
+            <p class="post-excerpt">
+              uzCSS ni mavjud HTML, React, Vue yoki boshqa web loyihalaringizga
+              osongina integratsiya qiling va o'zbek tilida CSS yozishni
+              boshlang.
+            </p>
+          </div>
+        </article>
+
+        <article class="post-card animate">
+          <div class="post-image">
+            <i class="fas fa-code"></i>
+          </div>
+          <div class="post-content">
+            <div class="post-meta">💻 Zamonaviy sintaksis</div>
+            <h3 class="post-title">Zamonaviy CSS qo'llab-quvvatlash</h3>
+            <p class="post-excerpt">
+              Flexbox, Grid, CSS Variables va boshqa zamonaviy CSS
+              xususiyatlarini o'zbek tilida yozing. Barcha zamonaviy CSS
+              imkoniyatlari mavjud.
+            </p>
+          </div>
+        </article>
+
+        <article class="post-card animate">
+          <div class="post-image">
+            <i class="fas fa-rocket"></i>
+          </div>
+          <div class="post-content">
+            <div class="post-meta">🚀 Tez va samarali</div>
+            <h3 class="post-title">Yuqori ishlash tezligi</h3>
+            <p class="post-excerpt">
+              uzCSS kompilyatori Node.js da yozilgan va juda tez ishlaydi. Katta
+              loyihalarda ham yuqori tezlik va samaradorlikni ta'minlaydi.
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="categories" id="categories">
+      <h2 class="section-title animate">Qo'llanma</h2>
+      <div class="categories-grid">
+        <div class="category-card animate">
+          <div class="category-icon">
+            <i class="fas fa-play-circle"></i>
+          </div>
+          <h3 class="category-name">Boshlash</h3>
+          <p class="category-count">uzCSS ni o'rnatish va boshlash</p>
+        </div>
+
+        <div class="category-card animate">
+          <div class="category-icon">
+            <i class="fas fa-book"></i>
+          </div>
+          <h3 class="category-name">Sintaksis</h3>
+          <p class="category-count">O'zbek CSS sintaksisi qoidalari</p>
+        </div>
+
+        <div class="category-card animate">
+          <div class="category-icon">
+            <i class="fas fa-palette"></i>
+          </div>
+          <h3 class="category-name">Xususiyatlar</h3>
+          <p class="category-count">Barcha CSS xususiyatlari ro'yxati</p>
+        </div>
+
+        <div class="category-card animate">
+          <div class="category-icon">
+            <i class="fas fa-tools"></i>
+          </div>
+          <h3 class="category-name">CLI</h3>
+          <p class="category-count">Command line interfeysi</p>
+        </div>
+
+        <div class="category-card animate">
+          <div class="category-icon">
+            <i class="fas fa-puzzle-piece"></i>
+          </div>
+          <h3 class="category-name">Misollar</h3>
+          <p class="category-count">Amaliy kod misollari</p>
+        </div>
+
+        <div class="category-card animate">
+          <div class="category-icon">
+            <i class="fas fa-question-circle"></i>
+          </div>
+          <h3 class="category-name">FAQ</h3>
+          <p class="category-count">Tez-tez so'raladigan savollar</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <div class="about-content">
+        <h2 class="section-title animate">Loyiha haqida</h2>
+
+        <div class="about-stats">
+          <div class="stat-item animate">
+            <div class="stat-number">100+</div>
+            <div class="stat-label">CSS Xususiyatlari</div>
+          </div>
+          <div class="stat-item animate">
+            <div class="stat-number">50+</div>
+            <div class="stat-label">Qiymatlar</div>
+          </div>
+          <div class="stat-item animate">
+            <div class="stat-number">1000+</div>
+            <div class="stat-label">Foydalanuvchilar</div>
+          </div>
+          <div class="stat-item animate">
+            <div class="stat-number">5+</div>
+            <div class="stat-label">Loyihalar</div>
+          </div>
+        </div>
+
+        <div class="animate">
+          <p>
+            uzCSS - bu O'zbek dasturchilari uchun mo'ljallangan zamonaviy CSS
+            preprocessor. Bizning maqsadimiz CSS yozishni o'zbek tilida amalga
+            oshirish va mahalliy dasturchilar uchun kod yozishni osonlashtirish.
+          </p>
+
+          <p>
+            Loyiha open-source bo'lib, barcha o'zbek dasturchilari uchun bepul
+            foydalanish uchun mo'ljallangan. GitHub'da kodni ko'rishingiz va
+            loyihaga hissa qo'shishingiz mumkin.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="newsletter" id="newsletter">
+      <div class="newsletter-content">
+        <h2 class="animate">Yangiliklar</h2>
+        <p class="animate">
+          uzCSS yangiliklari va yangi xususiyatlar haqida birinchi bo'lib xabar
+          oling. Hech qanday spam yo'q, faqat foydali ma'lumotlar.
+        </p>
+        <form class="newsletter-form animate">
+          <input
+            type="email"
+            class="email-input"
+            placeholder="Email manzilingizni kiriting..."
+            required
+          />
+          <button type="submit" class="btn">
+            <span>Obuna bo'lish</span>
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <ul class="footer-links">
+          <li><a href="#" class="footer-link">Bosh sahifa</a></li>
+          <li>
+            <a href="#featured" class="footer-link">Xususiyatlar</a>
+          </li>
+          <li><a href="#categories" class="footer-link">Qo'llanma</a></li>
+          <li><a href="#about" class="footer-link">Loyiha haqida</a></li>
+          <li>
+            <a
+              href="https://github.com/usmonovshohruxmirzo/uzcss"
+              class="footer-link"
+              target="_blank"
+              >GitHub</a
+            >
+          </li>
+          <li><a href="#" class="footer-link">NPM</a></li>
+        </ul>
+        <p class="footer-text">
+          &copy; 2025
+          <a href="https://github.com/webbro-software">Webbro Software</a>.
+          uzCSS ❤️ bilan yaratildi.
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px",
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+          }
+        });
+      }, observerOptions);
+
+      document.querySelectorAll(".animate").forEach((el) => {
+        observer.observe(el);
+      });
+
+      document
+        .querySelector(".newsletter-form")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+          const email = this.querySelector(".email-input").value;
+
+          if (email && email.includes("@")) {
+            alert("Rahmat! Siz muvaffaqiyatli obuna bo'ldingiz.");
+            this.querySelector(".email-input").value = "";
+          } else {
+            alert("Iltimos, to'g'ri email manzilini kiriting.");
+          }
+        });
+
+      window.addEventListener("scroll", () => {
+        const nav = document.querySelector(".nav");
+        if (window.scrollY > 100) {
+          nav.classList.add("active");
+        } else {
+          nav.classList.remove("active");
+        }
+      });
+    </script>
+  </body>
+</html>

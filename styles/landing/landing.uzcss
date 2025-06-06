@@ -1,0 +1,594 @@
+* {
+    tashqi-bo`shliq: 0;
+    ichki-bo`shliq: 0;
+    quti-o`lchami: chegara-qutisi;
+    o`tish-harakati: silliq;
+}
+
+body {
+    orqa-fon: chiziqli-rang-oqimi(135deg, #0a0a0f 0%, #1a0d2e 25%, #16213e 50%, #0f3460 75%, #533a7c 100%);
+    rang: oq;
+    shrft-oila: 'Inter', system-ui, -apple-system, sans-serif;
+    satr-balandligi: 1.7;
+    shrft-o`lchami: 16px;
+    to`lib-ketish-x: yashirin;
+    minimal-balandlik: 100vh;
+}
+
+body::before {
+    kontent: '';
+    pozitsiya: qo`zg`almas;
+    yuqori: 0;
+    chap: 0;
+    kengligi: 100%;
+    balandligi: 100%;
+    orqa-fon: doiraviy-rang-oqimi(aylana da 20% 80%, rgba(120, 119, 198, 0.3) 0%, shaffof 50%),
+                doiraviy-rang-oqimi(aylana da 80% 20%, rgba(255, 119, 198, 0.3) 0%, shaffof 50%),
+                doiraviy-rang-oqimi(aylana da 40% 40%, rgba(120, 219, 255, 0.2) 0%, shaffof 50%);
+    z-indeks: -1;
+    animatsiya: pulse 4s ease-in-out cheksiz navbatma-navbat;
+}
+
+@asosiy-kadrlar pulse {
+    0% { shaffoflik: 0.5; }
+    100% { shaffoflik: 0.8; }
+}
+
+.nav {
+    pozitsiya: qo`zg`almas;
+    yuqori: 20px;
+    chap: 50%;
+    transformatsiya: X-o`qi-bo`ylab-xarakat(-50%);
+    kengligi: 95%;
+    maksimal-kenglik: 1400px;
+    z-indeks: 1000;
+    chegara-radiusi: 24px;
+    ichki-bo`shliq: 16px 32px;
+    o`tish: barcha 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+
+.nav.active {
+    orqa-fon: rgba(255, 255, 255, 0.08);
+    element-soyasi: 0 25px 45px -12px rgba(0, 0, 0, 0.25), 0 0 0 1px rgba(255, 255, 255, 0.05);
+    orqa-fon-filtri: xiralashish(20px);
+}
+
+.nav-container {
+    ko`rsatish: moslashuvchan;
+    asosiy-o`q: bo`shliq-orasida;
+    kesish-o`q: markaz;
+}
+
+.logo {
+    shrft-o`lchami: 32px;
+    yozuv-qalinligi: qalin;
+    orqa-fon: chiziqli-rang-oqimi(135deg, #667eea, #764ba2, #f093fb);
+    veb-to`plam-orqa-fon-klipi: matn;
+    veb-to`plam-to`ldirish-rangi: shaffof;
+    orqa-fon-klipi: matn;
+    harf-oraligi: -2px;
+    matn-bezak: yo`q;
+}
+
+.nav-links {
+    ko`rsatish: moslashuvchan;
+    bo`shliq: 40px;
+    ro`yxat-uslubi: yo`q;
+}
+
+.nav-link {
+    rang: rgba(255, 255, 255, 0.8);
+    matn-bezak: yo`q;
+    yozuv-qalinligi: 500;
+    ichki-bo`shliq: 12px 20px;
+    chegara-radiusi: 16px;
+    o`tish: barcha 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    pozitsiya: nisbiy;
+}
+
+.nav-link:hover {
+    rang: oq;
+    orqa-fon: rgba(255, 255, 255, 0.1);
+    transformatsiya: Y-o`qi-bo`ylab-xarakat(-2px);
+}
+
+.hero {
+    balandligi: 100vh;
+    ko`rsatish: moslashuvchan;
+    flex-yo`nalish: ustun;
+    asosiy-o`q: markaz;
+    kesish-o`q: markaz;
+    matn-holati: markaz;
+    pozitsiya: nisbiy;
+    ichki-bo`shliq: 100px 20px;
+    to`lib-ketish: yashirin;
+}
+
+.hero-content {
+    maksimal-kenglik: 900px;
+    pozitsiya: nisbiy;
+    z-indeks: 2;
+}
+
+.hero h1 {
+    shrft-o`lchami: 80px;
+    yozuv-qalinligi: qalin;
+    tashqi-bo`shliq-past: 32px;
+    harf-oraligi: -3px;
+    orqa-fon: chiziqli-rang-oqimi(135deg, #667eea 0%, #764ba2 25%, #f093fb 50%, #f5576c 75%, #4facfe 100%);
+    veb-to`plam-orqa-fon-klipi: text;
+    veb-to`plam-to`ldirish-rangi: shaffof;
+    orqa-fon-klipi: text;
+    orqa-fon-o`lchami: 200% 200%;
+    animatsiya: gradientShift 3s ease-in-out cheksiz;
+}
+
+@asosiy-kadrlar gradientShift {
+    0%, 100% { orqa-fon-pozitsiyasi: 0% 50%; }
+    50% { orqa-fon-pozitsiyasi: 100% 50%; }
+}
+
+.hero p {
+    shrft-o`lchami: 24px;
+    rang: rgba(255, 255, 255, 0.85);
+    tashqi-bo`shliq-past: 48px;
+    satr-balandligi: 1.6;
+    maksimal-kenglik: 700px;
+    tashqi-bo`shliq: 0 avtomatik 48px;
+}
+
+.hero-buttons {
+    ko`rsatish: moslashuvchan;
+    bo`shliq: 24px;
+    asosiy-o`q: markaz;
+    flex-o`ralash: o`rash;
+}
+
+.btn {
+    pozitsiya: nisbiy;
+    ichki-bo`shliq: 18px 40px;
+    chegara-radiusi: 50px;
+    matn-bezak: yo`q;
+    yozuv-qalinligi: 600;
+    shrft-o`lchami: 16px;
+    cursor-ko`rinishi: pointer;
+    o`tish: barcha 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    chegara: yo`q;
+    to`lib-ketish: yashirin;
+    orqa-fon: chiziqli-rang-oqimi(135deg, #667eea 0%, #764ba2 100%);
+    rang: oq;
+    element-soyasi: 0 15px 35px rgba(102, 126, 234, 0.4), 0 5px 15px rgba(0, 0, 0, 0.12);
+}
+
+.btn::before {
+    kontent: '';
+    pozitsiya: mutlaqo;
+    yuqori: 0;
+    chap: 0;
+    kengligi: 100%;
+    balandligi: 100%;
+    orqa-fon: chiziqli-rang-oqimi(135deg, #764ba2 0%, #667eea 100%);
+    chegara-radiusi: 50px;
+    shaffoflik: 0;
+    o`tish: shaffoflik 0.4s;
+}
+
+.btn:hover::before {
+    shaffoflik: 1;
+}
+
+.btn:hover {
+    transformatsiya: Y-o`qi-bo`ylab-xarakat(-4px);
+    element-soyasi: 0 25px 50px rgba(102, 126, 234, 0.6),
+            0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.btn span {
+    pozitsiya: nisbiy;
+    z-indeks: 1;
+}
+
+.btn-outline {
+    orqa-fon: rgba(255, 255, 255, 0.05);
+    chegara: 2px solid rgba(255, 255, 255, 0.2);
+    element-soyasi: 0 8px 32px rgba(0, 0, 0, 0.12);
+    orqa-fon-filtri: xiralashish(10px);
+}
+
+.btn-outline::before {
+    orqa-fon: rgba(255, 255, 255, 0.1);
+}
+
+.btn-outline:hover {
+    chegara-rangi: rgba(255, 255, 255, 0.4);
+}
+
+.featured {
+    ichki-bo`shliq: 120px 20px;
+    orqa-fon: rgba(0, 0, 0, 0.2);
+    pozitsiya: nisbiy;
+}
+
+.section-title {
+    shrft-o`lchami: 56px;
+    yozuv-qalinligi: qalin;
+    matn-holati: markaz;
+    tashqi-bo`shliq-past: 80px;
+    orqa-fon: chiziqli-rang-oqimi(135deg, #667eea, #764ba2);
+    veb-to`plam-orqa-fon-klipi: matn;
+    veb-to`plam-to`ldirish-rangi: shaffof;
+    orqa-fon-klipi: matn;
+    harf-oraligi: -2px;
+}
+
+.posts-grid {
+    ko`rsatish: tor;
+    grid-shablon-ustunlar: takrorlash(avtomatik-moslashuv, min-va-maks(380px, 1fr));
+    bo`shliq: 32px;
+    maksimal-kenglik: 1400px;
+    tashqi-bo`shliq: 0 avtomatik;
+}
+
+.post-card {
+    orqa-fon: rgba(255, 255, 255, 0.03);
+    element-soyasi: 0 25px 50px -12px rgba(0, 0, 0, 0.25), 0 0 0 1px rgba(255, 255, 255, 0.05);
+    chegara-radiusi: 24px;
+    to`lib-ketish: yashirin;
+    o`tish: barcha 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    orqa-fon-filtri: xiralashish(20px);
+    pozitsiya: nisbiy;
+}
+
+.post-card::before {
+    kontent: '';
+    pozitsiya: mutlaqo;
+    yuqori: 0;
+    chap: 0;
+    kengligi: 100%;
+    balandligi: 100%;
+    orqa-fon: chiziqli-rang-oqimi(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+    chegara-radiusi: 24px;
+    shaffoflik: 0;
+    o`tish: shaffoflik 0.4s;
+}
+
+.post-card:hover::before {
+    shaffoflik: 1;
+}
+
+.post-card:hover {
+    transformatsiya: Y-o`qi-bo`ylab-xarakat(-12px) X-o`qi-bo`ylab-aylantirish(5deg);
+    element-soyasi: 0 35px 80px -12px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.1);
+}
+
+.post-image {
+    kengligi: 100%;
+    balandligi: 220px;
+    orqa-fon: chiziqli-rang-oqimi(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+    ko`rsatish: moslashuvchan;
+    asosiy-o`q: markaz;
+    kesish-o`q: markaz;
+    shrft-o`lchami: 80px;
+    rang: rgba(255, 255, 255, 0.9);
+    pozitsiya: nisbiy;
+    to`lib-ketish: yashirin;
+}
+
+.post-image::before {
+    kontent: '';
+    pozitsiya: mutlaqo;
+    yuqori: 0;
+    chap: 0;
+    kengligi: 100%;
+    balandligi: 100%;
+    orqa-fon: doiraviy-rang-oqimi(aylana da markaz, shaffof 30%, rgba(0, 0, 0, 0.2) 100%);
+}
+
+.post-content {
+    ichki-bo`shliq: 32px;
+    pozitsiya: nisbiy;
+    z-indeks: 1;
+}
+
+.post-meta {
+    shrft-o`lchami: 13px;
+    rang: rgba(255, 255, 255, 0.6);
+    tashqi-bo`shliq-past: 16px;
+    yozuv-qalinligi: 500;
+    harf-oraligi: 0.5px;
+}
+
+.post-title {
+    shrft-o`lchami: 22px;
+    yozuv-qalinligi: qalin;
+    tashqi-bo`shliq-past: 16px;
+    rang: oq;
+    satr-balandligi: 1.4;
+}
+
+.post-excerpt {
+    rang: rgba(255, 255, 255, 0.75);
+    satr-balandligi: 1.7;
+    shrft-o`lchami: 15px;
+}
+
+.categories {
+    ichki-bo`shliq: 120px 20px;
+    orqa-fon: rgba(0, 0, 0, 0.1);
+}
+
+.categories-grid {
+    ko`rsatish: tor;
+    grid-shablon-ustunlar: takrorlash(avtomatik-moslashuv, min-va-maks(280px, 1fr));
+    bo`shliq: 28px;
+    maksimal-kenglik: 1200px;
+    tashqi-bo`shliq: 0 avtomatik;
+}
+
+.category-card {
+    orqa-fon: rgba(255, 255, 255, 0.05);
+    element-soyasi: 0 20px 40px -12px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(255, 255, 255, 0.05);
+    ichki-bo`shliq: 40px;
+    chegara-radiusi: 20px;
+    matn-holati: markaz;
+    o`tish: barcha 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor-ko`rinishi: pointer;
+    orqa-fon-filtri: xiralashish(10px);
+    pozitsiya: nisbiy;
+    to`lib-ketish: yashirin;
+}
+
+.category-card::before {
+    kontent: '';
+    pozitsiya: mutlaqo;
+    yuqori: 0;
+    chap: 0;
+    kengligi: 100%;
+    balandligi: 100%;
+    orqa-fon: chiziqli-rang-oqimi(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+    chegara-radiusi: 20px;
+    shaffoflik: 0;
+    o`tish: shaffoflik 0.4s;
+}
+
+.category-card:hover::before {
+    shaffoflik: 1;
+}
+
+.category-card:hover {
+    transformatsiya: Y-o`qi-bo`ylab-xarakat(-8px);
+    element-soyasi: 0 30px 60px -12px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(255, 255, 255, 0.1);
+}
+
+.category-icon {
+    shrft-o`lchami: 40px;
+    tashqi-bo`shliq-past: 20px;
+    rang: #667eea;
+    pozitsiya: nisbiy;
+    z-indeks: 1;
+}
+
+.category-name {
+    shrft-o`lchami: 20px;
+    yozuv-qalinligi: qalin;
+    tashqi-bo`shliq-past: 12px;
+    rang: oq;
+    pozitsiya: nisbiy;
+    z-indeks: 1;
+}
+
+.category-count {
+    shrft-o`lchami: 14px;
+    rang: rgba(255, 255, 255, 0.7);
+    pozitsiya: nisbiy;
+    z-indeks: 1;
+}
+
+.newsletter {
+    ichki-bo`shliq: 120px 20px;
+    matn-holati: markaz;
+    orqa-fon: rgba(0, 0, 0, 0.2);
+    pozitsiya: nisbiy;
+}
+
+.newsletter-content {
+    maksimal-kenglik: 700px;
+    tashqi-bo`shliq: 0 avtomatik;
+}
+
+.newsletter h2 {
+    shrft-o`lchami: 48px;
+    yozuv-qalinligi: qalin;
+    tashqi-bo`shliq-past: 24px;
+    orqa-fon: chiziqli-rang-oqimi(135deg, #667eea, #764ba2);
+    veb-to`plam-orqa-fon-klipi: matn;
+    veb-to`plam-to`ldirish-rangi: shaffof;
+    orqa-fon-klipi: matn;
+}
+
+.newsletter p {
+    shrft-o`lchami: 20px;
+    rang: rgba(255, 255, 255, 0.8);
+    tashqi-bo`shliq-past: 50px;
+    satr-balandligi: 1.6;
+}
+
+.newsletter-form {
+    ko`rsatish: moslashuvchan;
+    bo`shliq: 20px;
+    asosiy-o`q: markaz;
+    flex-o`ralash: o`rash;
+}
+
+.email-input {
+    moslashuvchan: 1;
+    minimal-kenglik: 320px;
+    ichki-bo`shliq: 20px 24px;
+    chegara-radiusi: 50px;
+    chegara: 2px solid rgba(255, 255, 255, 0.1);
+    orqa-fon: rgba(255, 255, 255, 0.05);
+    rang: oq;
+    shrft-o`lchami: 16px;
+    tashqi-chegara: yo`q;
+    orqa-fon-filtri: xiralashish(10px);
+    o`tish: barcha 0.3s;
+}
+
+.email-input:focus {
+    chegara-rangi: #667eea;
+    orqa-fon: rgba(255, 255, 255, 0.08);
+    element-soyasi: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.email-input::placeholder {
+    rang: rgba(255, 255, 255, 0.5);
+}
+
+.about {
+    ichki-bo`shliq: 120px 20px;
+    orqa-fon: rgba(0, 0, 0, 0.1);
+}
+
+.about-content {
+    maksimal-kenglik: 1000px;
+    tashqi-bo`shliq: 0 avtomatik;
+    matn-holati: markaz;
+}
+
+.about-stats {
+    ko`rsatish: tor;
+    grid-shablon-ustunlar: takrorlash(avtomatik-moslashuv, min-va-maks(200px, 1fr));
+    bo`shliq: 48px;
+    tashqi-bo`shliq-past: 80px;
+}
+
+.stat-item {
+    orqa-fon: rgba(255, 255, 255, 0.03);
+    element-soyasi: 0 15px 35px -8px rgba(0, 0, 0, 0.2),
+            0 0 0 1px rgba(255, 255, 255, 0.05);
+    ichki-bo`shliq: 40px;
+    chegara-radiusi: 20px;
+    orqa-fon-filtri: xiralashish(10px);
+    o`tish: barcha 0.3s;
+}
+
+.stat-item:hover {
+    transformatsiya: Y-o`qi-bo`ylab-xarakat(-5px);
+    element-soyasi: 0 25px 50px -8px rgba(0, 0, 0, 0.3);
+}
+
+.stat-number {
+    shrft-o`lchami: 56px;
+    yozuv-qalinligi: qalin;
+    orqa-fon: chiziqli-rang-oqimi(135deg, #667eea, #764ba2);
+    veb-to`plam-orqa-fon-klipi: matn;
+    veb-to`plam-to`ldirish-rangi: shaffof;
+    orqa-fon-klipi: matn;
+    tashqi-bo`shliq-past: 12px;
+}
+
+.stat-label {
+    shrft-o`lchami: 16px;
+    rang: rgba(255, 255, 255, 0.7);
+    yozuv-qalinligi: 500;
+}
+
+.footer {
+    orqa-fon: rgba(0, 0, 0, 0.3);
+    ichki-bo`shliq: 80px 20px;
+    matn-holati: markaz;
+    chegara-tepa: 1px solid rgba(255, 255, 255, 0.05);
+    orqa-fon-filtri: xiralashish(10px);
+}
+
+.footer-content {
+    maksimal-kenglik: 1200px;
+    tashqi-bo`shliq: 0 avtomatik;
+    bo`shliq: 20px;
+}
+
+.footer-links {
+    ko`rsatish: moslashuvchan;
+    asosiy-o`q: markaz;
+    bo`shliq: 40px;
+    tashqi-bo`shliq-past: 40px;
+    ro`yxat-uslubi: yo`q;
+    flex-o`ralash: o`rash;
+}
+
+.footer-link {
+    rang: rgba(255, 255, 255, 0.7);
+    matn-bezak: yo`q;
+    ichki-bo`shliq: 12px 20px;
+    chegara-radiusi: 12px;
+    o`tish: barcha 0.3s;
+    yozuv-qalinligi: 500;
+}
+
+.footer-link:hover {
+    rang: oq;
+    orqa-fon: rgba(255, 255, 255, 0.05);
+}
+
+.footer-text {
+    rang: rgba(255, 255, 255, 0.6);
+    shrft-o`lchami: 15px;
+    tashqi-bo`shliq-tepa: 50px;
+}
+
+.footer-text a {
+    matn-bezak: yo`q;
+    rang: rgba(255, 255, 255, 0.6);
+    yozuv-qalinligi: qalin;
+}
+
+.footer-text a:hover {
+    matn-bezak: tagiga-chizish;
+}
+
+.animate {
+    shaffoflik: 0;
+    transformatsiya: Y-o`qi-bo`ylab-xarakat(40px);
+    o`tish: barcha 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.animate.visible {
+    shaffoflik: 1;
+    transformatsiya: Y-o`qi-bo`ylab-xarakat(0);
+}
+
+@ekran (maksimal-kenglik: 768px) {
+    .hero h1 {
+        shrft-o`lchami: 48px;
+    }
+    
+    .hero p {
+        shrft-o`lchami: 18px;
+    }
+    
+    .section-title {
+        shrft-o`lchami: 36px;
+    }
+    
+    .nav-links {
+        ko`rsatish: yo`q;
+    }
+    
+    .newsletter-form {
+        flex-yo`nalish: ustun;
+    }
+    
+    .email-input {
+        minimal-kenglik: 100%;
+    }
+
+    .posts-grid {
+        grid-shablon-ustunlar: 1fr;
+    }
+
+    .nav {
+        kengligi: 90%;
+        ichki-bo`shliq: 12px 20px;
+    }
+}
