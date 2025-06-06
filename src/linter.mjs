@@ -58,12 +58,6 @@ function linter(cssContent, filePath) {
       }
     }
   }
-
-  if (!hasError) {
-    console.log(
-      chalk.green("✅ Hammasi joyida! Hech qanday xatolik topilmadi.")
-    );
-  }
 }
 
 function getHasError() {

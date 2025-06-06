@@ -114,7 +114,7 @@ async function main() {
         const uzcssContent = await fs.readFile(inputFilePath, "utf-8");
 
         if (uzcssContent.trim() === "") {
-          console.warn(chalk.yellow(`⚠️ Bo'sh fayl: ${inputFilePath}`));
+          console.warn(chalk.yellow(`⚠️  Bo'sh fayl: ${inputFilePath}`));
           continue;
         }
 
@@ -143,6 +143,12 @@ async function main() {
         await fs.writeFile(outputFilePath, translatedCssContent, "utf-8");
 
         console.log(chalk.green(`✅ ${inputFilePath} → ${outputFilePath}`));
+
+        if (!getHasError()) {
+          console.log(
+            chalk.green("💯 Hammasi joyida! Hech qanday xatolik topilmadi.")
+          );
+        }
 
         successCount++;
       } catch (fileError) {
