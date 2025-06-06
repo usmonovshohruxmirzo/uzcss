@@ -3,7 +3,7 @@ import { properties } from "./config/uzcss.config.mjs";
 
 let hasError = false;
 
-function uzcssLinter(cssContent, filePath) {
+function linter(cssContent, filePath) {
   const lines = cssContent.split(/\r?\n/);
   const propRegex = /^([\w-]+)\s*:\s*(.+);$/;
 
@@ -70,4 +70,4 @@ function getHasError() {
   return hasError;
 }
 
-export { uzcssLinter, getHasError };
+export { linter, getHasError };

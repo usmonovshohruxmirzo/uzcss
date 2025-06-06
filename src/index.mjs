@@ -9,7 +9,7 @@ import {
   properties,
   values,
 } from "./config/uzcss.config.mjs";
-import { getHasError, uzcssLinter } from "./linter.mjs";
+import { getHasError, linter } from "./linter.mjs";
 
 function escapeRegex(string) {
   return string.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
@@ -120,7 +120,7 @@ async function main() {
 
         const translatedCssContent = translateCss(uzcssContent);
 
-        uzcssLinter(uzcssContent, inputFilePath);
+        linter(uzcssContent, inputFilePath);
 
         if (getHasError()) {
           emptyLine();
