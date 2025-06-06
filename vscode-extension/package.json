@@ -3,7 +3,7 @@
   "displayName": "UZCSS Syntax",
   "description": "Basic syntax highlighting for .uzcss files",
   "version": "0.0.1",
-  "publisher": "your-publisher",
+  "publisher": "@webbro-software",
   "engines": {
     "vscode": "^1.85.0"
   },
