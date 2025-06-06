@@ -1,0 +1,6 @@
+.mySelector {
+  color: red;
+  background-color: white;
+}
+// line comment
+/* block comment */
