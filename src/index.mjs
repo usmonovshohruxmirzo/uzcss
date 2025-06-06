@@ -9,6 +9,7 @@ import {
   properties,
   values,
 } from "./config/uzcss.config.mjs";
+import { getHasError, uzcssLinter } from "./linter.mjs";
 
 function escapeRegex(string) {
   return string.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
@@ -118,6 +119,18 @@ async function main() {
         }
 
         const translatedCssContent = translateCss(uzcssContent);
+
+        uzcssLinter(uzcssContent, inputFilePath);
+
+        if (getHasError()) {
+          emptyLine();
+          console.error(
+            chalk.red(
+              `❌ Xatolik topildi faylda: ${inputFilePath}, jarayon to'xtatildi!`
+            )
+          );
+          process.exit(1);
+        }
 
         const outputFileName = path.basename(inputFilePath, ".uzcss") + ".css";
         const inputDir = path.dirname(inputFilePath);

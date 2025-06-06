@@ -31,16 +31,38 @@ function uzcssLinter(cssContent, filePath) {
       );
 
       if (!isValid) {
+        const keys = Object.keys(properties);
+
+        const prefix = propertyName.slice(0, 4);
+        const suggestion =
+          keys.find((key) => key.startsWith(prefix)) ||
+          keys.find((key) => key.startsWith(propertyName.slice(0, 3))) ||
+          keys.find((key) => key.startsWith(propertyName.slice(0, 2))) ||
+          null;
+
+        const suggestionText = suggestion
+          ? `Ehtimol siz "${suggestion}" degan xususiyatni nazarda tutgandirsiz?`
+          : "Shunga o‘xshash xususiyat topilmadi.";
+
         console.log(
           chalk.yellow(
-            `⚠️  Unknown property: "${chalk.underline(
+            `⚠️  Noto\`g\`ri xususiyat: "${chalk.underline(
               propertyName
-            )}" at ${chalk.cyan(`${filePath}:${i + 1}`)}`
+            )}" faylda: ${chalk.cyan(
+              `${filePath}:${i + 1}`
+            )}. ${suggestionText}`
           )
         );
+
         hasError = true;
       }
     }
+  }
+
+  if (!hasError) {
+    console.log(
+      chalk.green("✅ Hammasi joyida! Hech qanday xatolik topilmadi.")
+    );
   }
 }
 

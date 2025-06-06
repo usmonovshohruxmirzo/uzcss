@@ -1,22 +1,22 @@
 body {
   rang: qora;
   orqa-fon-rangi: qizil;
-  matn-holat: markaz;
+  matn-holati: markaz;
   shrft-o`lchami: 16px;
-  kenglik: 500px;
+  kengligi: 500px;
   ichki-bo`shliq: 100px;
-  chegaralar: 10px;
-  balandlik: 500px;
+  tashqi-bo`shliq: 10px;
+  balandligi: 500px;
 }
 
 header {
-  kenglik: 10rem;
-  balandlik: 500px;
+  kengligi: 10rem;
+  balandligi: 500px;
 }
 
 h1 {
   rang: qora;
   orqa-fon-rangi: qizil;
-  balandlik: 500px;
+  balandligi: 500px;
 }
 
