@@ -1,4 +1,4 @@
-// TODO: autocomplation cotext
+// TODO: autocomplation context
 
 import { promises as fs } from "fs";
 import path from "path";
