@@ -1,6 +1,6 @@
 .mySelector {
-  color: red;
-  background-color: white;
+  rang: qizl;
+  matn-holati: oq;
 }
-// line comment
+
 /* block comment */
